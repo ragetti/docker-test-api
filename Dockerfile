@@ -13,4 +13,6 @@ FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 WORKDIR /app
 COPY --from=builder /app .
+
+EXPOSE 8000
 CMD ["/app/dockertestapi"]

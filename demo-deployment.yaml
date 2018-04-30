@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-deployment
+  labels:
+    app: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+      - name: api
+        image: dockertestapi:1.0
+        ports:
+        - containerPort: 8000
+      - name: frontend
+        image: dockerapiviewer:1.0
+        ports:
+        - containerPort: 80
+
+
+
