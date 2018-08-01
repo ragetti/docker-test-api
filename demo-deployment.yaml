@@ -20,7 +20,7 @@ spec:
         ports:
         - containerPort: 8000
       - name: frontend
-        image: dockerapiviewer:1.0
+        image: dockerapiviewer:1.1
         ports:
         - containerPort: 80
 
