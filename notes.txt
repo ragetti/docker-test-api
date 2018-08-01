@@ -1,0 +1,12 @@
+kubectl -n kube-system get po
+
+
+docker run -d -v /home/selliott/demo/docker-test-api/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg -p80:80 haproxy:alpine
+
+kubectl rollout status demo-deployment
+ kubectl rollout status deployment/demo-deployment
+ kubectl delete deployment/nginx-deveployment
+ kubectl expose deployment demo --type=LoadBalancer --name=demo-service --port=80 --target-port=80
+
+
+
